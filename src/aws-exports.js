@@ -1,7 +1,7 @@
 // src/aws-exports.js
 const awsmobile = {
     Auth: {
-      region: 'us-east-1',
+      region: 'us-east-2',
       userPoolId: 'us-east-2_BOxQn3DrD',
       userPoolWebClientId: '4pmalt6c50fjjkjl9n9fn58qd3',
       oauth: {
