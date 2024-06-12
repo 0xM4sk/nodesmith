@@ -7,6 +7,7 @@
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "aws-amplify": "^6.3.6",
     "aws-sdk": "^2.1639.0",
     "cors": "^2.8.5",
     "d3": "^7.9.0",
@@ -23,9 +24,8 @@
     "react-dom": "^18.3.1",
     "react-filepond": "^7.1.2",
     "react-scripts": "5.0.1",
-    "web-vitals": "^2.1.4",
-    "serverless-http": "^2.7.0"
-
+    "serverless-http": "^2.7.0",
+    "web-vitals": "^2.1.4"
   },
   "scripts": {
     "start": "concurrently \"npm run start:frontend\" \"npm run start:backend\"",
@@ -63,9 +63,9 @@
     "concurrently": "^8.2.2",
     "constructs": "^10.3.0",
     "esbuild": "^0.21.5",
-    "tsx": "^4.15.2",
-    "typescript": "^3.2.1",
     "serverless": "^2.72.2",
-    "serverless-offline": "^8.2.0"
+    "serverless-offline": "^8.2.0",
+    "tsx": "^4.15.2",
+    "typescript": "^3.2.1"
   }
 }
