@@ -44,15 +44,7 @@
       "react-app/jest"
     ]
   },
-  "jest": {
-  "transform": {
-    "^.+\\.jsx?$": "babel-jest"
-  },
-  "transformIgnorePatterns": [
-    "/node_modules/(?!d3-array|d3-scale|d3-selection).+\\.js$"
-    ]
-  },
-
+  
   "browserslist": {
     "production": [
       ">0.2%",
@@ -71,7 +63,6 @@
     "@babel/core": "^7.24.7",
     "@babel/preset-env": "^7.24.7",
     "@babel/preset-react": "^7.24.7",
-    "@babel/plugin-proposal-private-property-in-object": "^7.24.7",
     "aws-cdk": "^2.145.0",
     "aws-cdk-lib": "^2.145.0",
     "babel-jest": "^29.7.0",
@@ -83,4 +74,7 @@
     "tsx": "^4.15.2",
     "typescript": "^3.2.1"
   }
+  
+  
+  
 }
