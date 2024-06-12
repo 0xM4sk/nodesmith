@@ -2,7 +2,7 @@ import './App.css';
 import React from 'react';
 import WorkflowEditor from './components/WorkflowEditor';
 import FileUpload from './components/FileUpload';
-import { withAuthenticator } from 'aws-amplify/ui-react';
+import { withAuthenticator } from '@aws-amplify/ui-react';
 
 function App() {
   return (
