@@ -6,7 +6,7 @@ const awsmobile = {
       userPoolWebClientId: '4pmalt6c50fjjkjl9n9fn58qd3',
       oauth: {
         domain: 'https://nodesmithlogin.auth.us-east-2.amazoncognito.com',
-        scope: ['email', 'openid', 'profile'],
+        scope: ['email', 'nodesmithlogin'],
         redirectSignIn: 'http://nodesmith.dev',
         redirectSignOut: 'http://nodesmith.dev',
         responseType: 'code'
