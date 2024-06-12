@@ -16,7 +16,7 @@
       "provider": {
         "name": "aws",
         "runtime": "nodejs14.x",
-        "region": "us-west-2",
+        "region": "us-east-2",
         "stage": "dev",
         "versionFunctions": true
       },
@@ -38,16 +38,14 @@
         "serverless-offline"
       ]
     },
-    "serviceRawFile": "# \"org\" ensures this Service is used with the correct Serverless Framework Access Key.\norg: loshermanossinespagueti\n# \"app\" enables Serverless Framework Dashboard features and sharing them with other Services.\napp: nodesmith\nservice: nodesmith-backend\n\nprovider:\n  name: aws\n  runtime: nodejs14.x\n  region: us-west-2\n\nfunctions:\n  app:\n    handler: server.handler\n    events:\n      - http:\n          path: /{proxy+}\n          method: any\n          cors: true\n\nplugins:\n  - serverless-offline\n",
+    "serviceRawFile": "# \"org\" ensures this Service is used with the correct Serverless Framework Access Key.\norg: loshermanossinespagueti\n# \"app\" enables Serverless Framework Dashboard features and sharing them with other Services.\napp: nodesmith\nservice: nodesmith-backend\n\nprovider:\n  name: aws\n  runtime: nodejs14.x\n  region: us-east-2\n\nfunctions:\n  app:\n    handler: server.handler\n    events:\n      - http:\n          path: /{proxy+}\n          method: any\n          cors: true\n\nplugins:\n  - serverless-offline\n",
     "command": [
       "deploy"
     ],
-    "options": {
-      "debug": "*"
-    },
+    "options": {},
     "error": {
       "message": "Serverless plugin \"serverless-offline\" not found. Make sure it's installed and listed in the \"plugins\" section of your serverless config file. Use the --debug flag to learn more.",
-      "stack": "ServerlessError2: Serverless plugin \"serverless-offline\" not found. Make sure it's installed and listed in the \"plugins\" section of your serverless config file. Use the --debug flag to learn more.\n    at PluginManager.resolveServicePlugins (/home/baseline/.serverless/releases/4.1.1/serverless/lib/classes/plugin-manager.js:348:15)\n    at PluginManager.loadAllPlugins (/home/baseline/.serverless/releases/4.1.1/serverless/lib/classes/plugin-manager.js:265:7)\n    at Serverless.init (/home/baseline/.serverless/releases/4.1.1/serverless/lib/serverless.js:149:5)\n    at runFramework (/home/baseline/.serverless/releases/4.1.1/sf-core/src/lib/runners/framework.js:168:5)\n    at route (/home/baseline/.serverless/releases/4.1.1/sf-core/src/lib/router.js:197:10)\n    at Object.run2 (/home/baseline/.serverless/releases/4.1.1/sf-core/src/index.js:45:3)\n    at run3 (/home/baseline/.serverless/releases/4.1.1/sf-core/bin/sf-core.js:30:3)",
+      "stack": "ServerlessError2: Serverless plugin \"serverless-offline\" not found. Make sure it's installed and listed in the \"plugins\" section of your serverless config file. Use the --debug flag to learn more.\n    at PluginManager.resolveServicePlugins (file:///root/.serverless/releases/4.1.1/package/dist/sf-core.js:1008:2667)\n    at async PluginManager.loadAllPlugins (file:///root/.serverless/releases/4.1.1/package/dist/sf-core.js:1008:1293)\n    at async Serverless.init (file:///root/.serverless/releases/4.1.1/package/dist/sf-core.js:1015:9760)\n    at async runFramework (file:///root/.serverless/releases/4.1.1/package/dist/sf-core.js:1059:890)\n    at async route (file:///root/.serverless/releases/4.1.1/package/dist/sf-core.js:1068:14737)\n    at async Object.run2 [as run] (file:///root/.serverless/releases/4.1.1/package/dist/sf-core.js:1068:15141)\n    at async run3 (file:///root/.serverless/releases/4.1.1/package/dist/sf-core.js:1068:16375)",
       "code": "PLUGIN_NOT_FOUND"
     },
     "params": {},
@@ -62,9 +60,15 @@
       "requiredAuthentication": false,
       "orgFeaturesInUse": {
         "providers": true,
-        "monitoring": false
+        "monitoring": true
       },
-      "orgObservabilityIntegrations": null,
+      "orgObservabilityIntegrations": [
+        {
+          "integrationId": "69DhSsAegYU9ha6ArQVSab",
+          "awsAccountId": "891377107897",
+          "status": "alive"
+        }
+      ],
       "serviceAppId": "28RVKLc8pxXRpWr8qQ",
       "serviceProvider": {
         "accessKeyId": "<REDACTED>",
@@ -79,11 +83,38 @@
     "serviceProviderAwsCredentials": "<REDACTED>",
     "serviceProviderAwsAccountId": "891377107897",
     "versionSf": "4.1.1",
-    "serviceProviderAwsCfStackId": null,
-    "serviceProviderAwsCfStackCreated": null,
+    "serviceProviderAwsCfStackId": "arn:aws:cloudformation:us-east-2:891377107897:stack/CDKToolkit/f7a326f0-2889-11ef-b312-021e06483341",
+    "serviceProviderAwsCfStackCreated": "2024-06-12T07:04:10.258Z",
     "serviceProviderAwsCfStackUpdated": null,
-    "serviceProviderAwsCfStackStatus": null,
-    "serviceProviderAwsCfStackOutputs": null
+    "serviceProviderAwsCfStackStatus": "CREATE_COMPLETE",
+    "serviceProviderAwsCfStackOutputs": [
+      {
+        "OutputKey": "ImageRepositoryName",
+        "OutputValue": "cdk-hnb659fds-container-assets-891377107897-us-east-2",
+        "Description": "The name of the ECR repository which hosts docker image assets"
+      },
+      {
+        "OutputKey": "BucketName",
+        "OutputValue": "cdk-hnb659fds-assets-891377107897-us-east-2",
+        "Description": "The name of the S3 bucket owned by the CDK toolkit stack"
+      },
+      {
+        "OutputKey": "BootstrapVersion",
+        "OutputValue": "18",
+        "Description": "The version of the bootstrap resources that are currently mastered in this stack"
+      },
+      {
+        "OutputKey": "BucketDomainName",
+        "OutputValue": "cdk-hnb659fds-assets-891377107897-us-east-2.s3.us-east-2.amazonaws.com",
+        "Description": "The domain name of the S3 bucket owned by the CDK toolkit stack"
+      },
+      {
+        "OutputKey": "FileAssetKeyArn",
+        "OutputValue": "AWS_MANAGED_KEY",
+        "Description": "The ARN of the KMS key used to encrypt the asset bucket (deprecated)",
+        "ExportName": "CdkBootstrap-hnb659fds-FileAssetKeyArn"
+      }
+    ]
   },
   "unknown": {
     "versionSfCore": null,
