@@ -174,7 +174,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/nodesmith-backend/dev/1718181362826-2024-06-12T08:36:02.826Z/nodesmith-backend.zip"
+                "S3Key": "serverless/nodesmith-backend/dev/1718182637221-2024-06-12T08:57:17.221Z/nodesmith-backend.zip"
               },
               "Handler": "server.handler",
               "Runtime": "nodejs20.x",
@@ -192,14 +192,14 @@
               "AppLogGroup"
             ]
           },
-          "AppLambdaVersionRbogIrzt8EtlKLsrlRbcNAU6DQOXbpIW1txcgTw": {
+          "AppLambdaVersion541qPC8ydec8T4qbmkW1BZX1eKebGrI8V56LI": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "AppLambdaFunction"
               },
-              "CodeSha256": "04HR9AvhyCcGTNDIH7hwq+om0a+YnEEYIZJ0dfb52r0="
+              "CodeSha256": "GG1ikIe98bFiUBAJJYmROP/sZ8H1FXUvuhjJIA42nHQ="
             }
           },
           "ApiGatewayRestApi": {
@@ -320,7 +320,7 @@
               "AppLambdaPermissionApiGateway"
             ]
           },
-          "ApiGatewayDeployment1718181362025": {
+          "ApiGatewayDeployment1718182636420": {
             "Type": "AWS::ApiGateway::Deployment",
             "Properties": {
               "RestApiId": {
@@ -383,7 +383,7 @@
           "AppLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "AppLambdaVersionRbogIrzt8EtlKLsrlRbcNAU6DQOXbpIW1txcgTw"
+              "Ref": "AppLambdaVersion541qPC8ydec8T4qbmkW1BZX1eKebGrI8V56LI"
             },
             "Export": {
               "Name": "sls-nodesmith-backend-dev-AppLambdaFunctionQualifiedArn"
@@ -540,7 +540,7 @@
         "timeout": 6,
         "runtime": "nodejs20.x",
         "vpc": {},
-        "versionLogicalId": "AppLambdaVersionRbogIrzt8EtlKLsrlRbcNAU6DQOXbpIW1txcgTw"
+        "versionLogicalId": "AppLambdaVersion541qPC8ydec8T4qbmkW1BZX1eKebGrI8V56LI"
       }
     },
     "configValidationMode": "warn",
@@ -567,7 +567,7 @@
     "artifact": "/mnt/b/nodesmith/nodesmith/backend/.serverless/nodesmith-backend.zip"
   },
   "package": {
-    "artifactDirectoryName": "serverless/nodesmith-backend/dev/1718181362826-2024-06-12T08:36:02.826Z",
+    "artifactDirectoryName": "serverless/nodesmith-backend/dev/1718182637221-2024-06-12T08:57:17.221Z",
     "artifact": "nodesmith-backend.zip"
   }
 }

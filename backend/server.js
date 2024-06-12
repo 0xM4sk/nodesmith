@@ -9,10 +9,10 @@ const dotenv = require('dotenv');
 
 dotenv.config(); // Ensure this is called before using any environment variables
 
-AWS.config.update({ region: 'us-east-2' }); // Change to your AWS region
+AWS.config.update({ region: 'us-east-1' }); // Change to your AWS region
 
 const app = express();
-app.use(cors());
+app.use(cors({ origin: 'https://nodesmith.dev' })); // Update to your domain
 app.use(express.json());
 app.use(fileUpload());
 
@@ -45,7 +45,7 @@ app.post('/upload', (req, res) => {
 
   console.log('File received:', file.name);
   const params = {
-    Bucket: process.env.AWS_S3_BUCKET, // Ensure the Bucket parameter is correctly set
+    Bucket: process.env.S3_BUCKET_NAME, // Ensure the Bucket parameter is correctly set
     Key: file.name,
     Body: file.data
   };
@@ -61,4 +61,3 @@ app.post('/upload', (req, res) => {
 });
 
 module.exports.handler = serverless(app);
-
