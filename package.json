@@ -44,7 +44,6 @@
       "react-app/jest"
     ]
   },
-  
   "browserslist": {
     "production": [
       ">0.2%",
@@ -61,6 +60,7 @@
     "@aws-amplify/backend": "^1.0.3",
     "@aws-amplify/backend-cli": "^1.0.4",
     "@babel/core": "^7.24.7",
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "@babel/preset-env": "^7.24.7",
     "@babel/preset-react": "^7.24.7",
     "aws-cdk": "^2.145.0",
@@ -74,7 +74,4 @@
     "tsx": "^4.15.2",
     "typescript": "^3.2.1"
   }
-  
-  
-  
 }
