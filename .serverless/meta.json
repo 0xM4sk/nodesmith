@@ -16,7 +16,7 @@
       "provider": {
         "name": "aws",
         "runtime": "nodejs14.x",
-        "region": "us-east-2",
+        "region": "us-east-1",
         "stage": "dev",
         "versionFunctions": true
       },
@@ -38,7 +38,7 @@
         "serverless-offline"
       ]
     },
-    "serviceRawFile": "# \"org\" ensures this Service is used with the correct Serverless Framework Access Key.\norg: loshermanossinespagueti\n# \"app\" enables Serverless Framework Dashboard features and sharing them with other Services.\napp: nodesmith\nservice: nodesmith-backend\n\nprovider:\n  name: aws\n  runtime: nodejs14.x\n  region: us-east-2\n\nfunctions:\n  app:\n    handler: server.handler\n    events:\n      - http:\n          path: /{proxy+}\n          method: any\n          cors: true\n\nplugins:\n  - serverless-offline\n",
+    "serviceRawFile": "# \"org\" ensures this Service is used with the correct Serverless Framework Access Key.\norg: loshermanossinespagueti\n# \"app\" enables Serverless Framework Dashboard features and sharing them with other Services.\napp: nodesmith\nservice: nodesmith-backend\n\nprovider:\n  name: aws\n  runtime: nodejs14.x\n  region: us-east-1\n\nfunctions:\n  app:\n    handler: server.handler\n    events:\n      - http:\n          path: /{proxy+}\n          method: any\n          cors: true\n\nplugins:\n  - serverless-offline\n",
     "command": [
       "deploy"
     ],
@@ -83,8 +83,8 @@
     "serviceProviderAwsCredentials": "<REDACTED>",
     "serviceProviderAwsAccountId": "891377107897",
     "versionSf": "4.1.1",
-    "serviceProviderAwsCfStackId": "arn:aws:cloudformation:us-east-2:891377107897:stack/CDKToolkit/f7a326f0-2889-11ef-b312-021e06483341",
-    "serviceProviderAwsCfStackCreated": "2024-06-12T07:04:10.258Z",
+    "serviceProviderAwsCfStackId": "arn:aws:cloudformation:us-east-1:891377107897:stack/Serverless-Inc-Role-Stack/a4ca1ca0-2892-11ef-b322-12ae4bb638bf",
+    "serviceProviderAwsCfStackCreated": "2024-06-12T08:06:16.885Z",
     "serviceProviderAwsCfStackUpdated": null,
     "serviceProviderAwsCfStackStatus": "CREATE_COMPLETE",
     "serviceProviderAwsCfStackOutputs": [

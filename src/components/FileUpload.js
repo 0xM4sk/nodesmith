@@ -14,7 +14,7 @@ const FileUpload = () => {
     <FilePond
       allowMultiple={true}
       server={{
-        url: 'http://localhost:5000',
+        url: 'https://tdgbg90c6i.execute-api.us-east-1.amazonaws.com/dev/',
         process: {
           url: '/upload',
           method: 'POST',

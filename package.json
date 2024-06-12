@@ -23,7 +23,9 @@
     "react-dom": "^18.3.1",
     "react-filepond": "^7.1.2",
     "react-scripts": "5.0.1",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "^2.1.4",
+    "serverless-http": "^2.7.0"
+
   },
   "scripts": {
     "start": "concurrently \"npm run start:frontend\" \"npm run start:backend\"",
@@ -31,7 +33,9 @@
     "start:backend": "node backend/server.js",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "deploy": "serverless deploy",
+    "offline": "serverless offline"
   },
   "eslintConfig": {
     "extends": [
@@ -60,6 +64,8 @@
     "constructs": "^10.3.0",
     "esbuild": "^0.21.5",
     "tsx": "^4.15.2",
-    "typescript": "^5.4.5"
+    "typescript": "^3.2.1",
+    "serverless": "^2.72.2",
+    "serverless-offline": "^8.2.0"
   }
 }
