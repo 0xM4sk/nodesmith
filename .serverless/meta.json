@@ -1,0 +1,104 @@
+{
+  "/mnt/b/nodesmith/nodesmith": {
+    "versionSfCore": null,
+    "versionFramework": "4.1.1",
+    "isWithinCompose": false,
+    "isCompose": false,
+    "composeOrgName": null,
+    "composeResolverProviders": {},
+    "composeServiceName": null,
+    "servicePath": "/mnt/b/nodesmith/nodesmith",
+    "serviceConfigFileName": "serverless.yml",
+    "service": {
+      "org": "loshermanossinespagueti",
+      "app": "nodesmith",
+      "service": "nodesmith-backend",
+      "provider": {
+        "name": "aws",
+        "runtime": "nodejs14.x",
+        "region": "us-west-2",
+        "stage": "dev",
+        "versionFunctions": true
+      },
+      "functions": {
+        "app": {
+          "handler": "server.handler",
+          "events": [
+            {
+              "http": {
+                "path": "/{proxy+}",
+                "method": "any",
+                "cors": true
+              }
+            }
+          ]
+        }
+      },
+      "plugins": [
+        "serverless-offline"
+      ]
+    },
+    "serviceRawFile": "# \"org\" ensures this Service is used with the correct Serverless Framework Access Key.\norg: loshermanossinespagueti\n# \"app\" enables Serverless Framework Dashboard features and sharing them with other Services.\napp: nodesmith\nservice: nodesmith-backend\n\nprovider:\n  name: aws\n  runtime: nodejs14.x\n  region: us-west-2\n\nfunctions:\n  app:\n    handler: server.handler\n    events:\n      - http:\n          path: /{proxy+}\n          method: any\n          cors: true\n\nplugins:\n  - serverless-offline\n",
+    "command": [
+      "deploy"
+    ],
+    "options": {
+      "debug": "*"
+    },
+    "error": {
+      "message": "Serverless plugin \"serverless-offline\" not found. Make sure it's installed and listed in the \"plugins\" section of your serverless config file. Use the --debug flag to learn more.",
+      "stack": "ServerlessError2: Serverless plugin \"serverless-offline\" not found. Make sure it's installed and listed in the \"plugins\" section of your serverless config file. Use the --debug flag to learn more.\n    at PluginManager.resolveServicePlugins (/home/baseline/.serverless/releases/4.1.1/serverless/lib/classes/plugin-manager.js:348:15)\n    at PluginManager.loadAllPlugins (/home/baseline/.serverless/releases/4.1.1/serverless/lib/classes/plugin-manager.js:265:7)\n    at Serverless.init (/home/baseline/.serverless/releases/4.1.1/serverless/lib/serverless.js:149:5)\n    at runFramework (/home/baseline/.serverless/releases/4.1.1/sf-core/src/lib/runners/framework.js:168:5)\n    at route (/home/baseline/.serverless/releases/4.1.1/sf-core/src/lib/router.js:197:10)\n    at Object.run2 (/home/baseline/.serverless/releases/4.1.1/sf-core/src/index.js:45:3)\n    at run3 (/home/baseline/.serverless/releases/4.1.1/sf-core/bin/sf-core.js:30:3)",
+      "code": "PLUGIN_NOT_FOUND"
+    },
+    "params": {},
+    "machineId": "678d4db6702018d63093861d2def71f8",
+    "accessKeyV2": "<REDACTED>",
+    "accessKeyV1": "<REDACTED>",
+    "orgId": "843bbfe7-c2df-4bd5-9e64-663ba821704e",
+    "orgName": "loshermanossinespagueti",
+    "userId": "Qrl2j63ly3T9TtCBsG",
+    "dashboard": {
+      "isEnabledForService": true,
+      "requiredAuthentication": false,
+      "orgFeaturesInUse": {
+        "providers": true,
+        "monitoring": false
+      },
+      "orgObservabilityIntegrations": null,
+      "serviceAppId": "28RVKLc8pxXRpWr8qQ",
+      "serviceProvider": {
+        "accessKeyId": "<REDACTED>",
+        "secretAccessKey": "<REDACTED>",
+        "sessionToken": "<REDACTED>"
+      },
+      "instanceParameters": null
+    },
+    "userName": "loshermanossinespagueti",
+    "subscription": null,
+    "userEmail": "0xm4sk@gmail.com",
+    "serviceProviderAwsCredentials": "<REDACTED>",
+    "serviceProviderAwsAccountId": "891377107897",
+    "versionSf": "4.1.1",
+    "serviceProviderAwsCfStackId": null,
+    "serviceProviderAwsCfStackCreated": null,
+    "serviceProviderAwsCfStackUpdated": null,
+    "serviceProviderAwsCfStackStatus": null,
+    "serviceProviderAwsCfStackOutputs": null
+  },
+  "unknown": {
+    "versionSfCore": null,
+    "versionFramework": "4.1.1",
+    "isWithinCompose": false,
+    "composeOrgName": null,
+    "composeServiceName": null,
+    "command": [],
+    "options": {},
+    "error": null,
+    "machineId": "678d4db6702018d63093861d2def71f8",
+    "serviceProviderAwsCfStackId": null,
+    "serviceProviderAwsCfStackCreated": null,
+    "serviceProviderAwsCfStackUpdated": null,
+    "serviceProviderAwsCfStackStatus": null,
+    "serviceProviderAwsCfStackOutputs": null
+  }
+}

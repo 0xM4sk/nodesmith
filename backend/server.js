@@ -1,5 +1,6 @@
 // backend/server.js
 
+const serverless = require('serverless-http');
 const express = require('express');
 const AWS = require('aws-sdk');
 const fileUpload = require('express-fileupload');
@@ -8,11 +9,7 @@ const dotenv = require('dotenv');
 
 dotenv.config(); // Ensure this is called before using any environment variables
 
-console.log('AWS_ACCESS_KEY_ID:', process.env.AWS_ACCESS_KEY_ID);
-console.log('AWS_SECRET_ACCESS_KEY:', process.env.AWS_SECRET_ACCESS_KEY);
-console.log('S3_BUCKET_NAME:', process.env.AWS_S3_BUCKET);
-
-AWS.config.update({ region: 'us-west-2' }); // Change to your AWS region
+AWS.config.update({ region: 'us-east-2' }); // Change to your AWS region
 
 const app = express();
 app.use(cors());
@@ -63,18 +60,5 @@ app.post('/upload', (req, res) => {
   });
 });
 
-app.post('/generate-workflow', async (req, res) => {
-    const prompt = req.body.prompt;
-    const response = await openaiClient.complete({
-      engine: 'davinci-codex',
-      prompt,
-      maxTokens: 150
-    });
-    res.send(response.data);
-  });
-  
-const PORT = 5000;  // Changed to port 5000
-app.listen(PORT, '0.0.0.0', () => {
-  console.log(`Server is running on port ${PORT}`);
-});
+module.exports.handler = serverless(app);
 
