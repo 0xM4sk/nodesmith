@@ -59,8 +59,13 @@
   "devDependencies": {
     "@aws-amplify/backend": "^1.0.3",
     "@aws-amplify/backend-cli": "^1.0.4",
+    "@babel/core": "^7.24.7",
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+    "@babel/preset-env": "^7.24.7",
+    "@babel/preset-react": "^7.24.7",
     "aws-cdk": "^2.145.0",
     "aws-cdk-lib": "^2.145.0",
+    "babel-jest": "^29.7.0",
     "concurrently": "^8.2.2",
     "constructs": "^10.3.0",
     "esbuild": "^0.21.5",
